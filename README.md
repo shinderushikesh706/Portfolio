@@ -173,48 +173,66 @@ To send actual emails to your inbox, you can easily plug in **Resend**, **SendGr
 
 ---
 
-## ☁️ Deployment Guide (Vultr VPS with Docker)
+## ☁️ Deployment Guide (Oracle Cloud Infrastructure - OCI)
 
-This repository includes a multi-stage `Dockerfile`, `docker-compose.yml`, and an automated `deploy.sh` script for deploying to any Vultr Cloud Compute instance:
+This repository includes a production multi-stage `Dockerfile`, `docker-compose.yml`, and an automated `deploy.sh` script specifically tested for **OCI Compute Instances** (Ubuntu and Oracle Linux, both AMD64 and ARM64 Ampere A1).
 
-### Option 1: One-Click Deploy on Vultr VPS
-1. Spin up an Ubuntu 22.04 / 24.04 instance on [Vultr](https://my.vultr.com/).
-2. SSH into your Vultr instance:
-   ```bash
-   ssh root@<YOUR_VULTR_IP>
-   ```
-3. Clone the repo and run the deployment script:
-   ```bash
-   git clone https://github.com/shinderushikesh706/portfolio_new.git /var/www/portfolio
-   cd /var/www/portfolio
-   chmod +x deploy.sh
-   ./deploy.sh
-   ```
-   The script automatically installs Docker & Docker Compose (if not present), builds the lightweight standalone container, and starts your site on port 80!
-
-### Option 2: Automated Deployment via GitHub Actions
-Add your Vultr SSH credentials as GitHub Secrets:
-- `VULTR_HOST`: Your Vultr Server IP
-- `VULTR_SSH_KEY`: Your private SSH key
-- `VULTR_USERNAME`: `root` (or your sudo user)
-
-Whenever you push to the `main` branch, [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) will automatically build and deploy the latest changes to your Vultr instance.
+### Step 1: Open Port 80 in OCI Virtual Cloud Network (VCN)
+OCI blocks all non-SSH inbound traffic by default at the cloud network level:
+1. Open the [Oracle Cloud Console](https://cloud.oracle.com/).
+2. Navigate to **Networking** → **Virtual Cloud Networks**.
+3. Click your **VCN** name → click **Security Lists** (under Resources on the left).
+4. Click **Default Security List for <your-vcn>**.
+5. Click **Add Ingress Rules**:
+   - **Source Type**: `CIDR`
+   - **Source CIDR**: `0.0.0.0/0`
+   - **IP Protocol**: `TCP`
+   - **Destination Port Range**: `80, 443`
+   - **Description**: `Allow HTTP and HTTPS traffic`
+6. Click **Add Ingress Rules**.
 
 ---
 
-## 🔌 Vultr MCP Configuration
+### Step 2: SSH into Your OCI Instance & Deploy
+Connect via SSH (`ubuntu` for Ubuntu images, `opc` for Oracle Linux):
 
-The project includes an MCP configuration file in [`.agents/mcp_config.json`](.agents/mcp_config.json):
-```json
-{
-  "mcpServers": {
-    "vultr": {
-      "url": "https://mcp.vultr.com/mcp"
-    }
-  }
-}
+```bash
+# For Ubuntu instance:
+ssh -i /path/to/your/private_key ubuntu@<YOUR_OCI_PUBLIC_IP>
+
+# Or for Oracle Linux instance:
+ssh -i /path/to/your/private_key opc@<YOUR_OCI_PUBLIC_IP>
 ```
-*Note: The official Vultr MCP Server connects over Streamable HTTP and provides read-only inspection of your instances, IP addresses, firewall rules, and VPC networks via browser OAuth.*
+
+Once logged in, run:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/shinderushikesh706/portfolio_new.git ~/portfolio
+cd ~/portfolio
+
+# 2. Run the automated deployment script
+chmod +x deploy.sh
+./deploy.sh
+```
+
+**What `deploy.sh` does automatically:**
+- Installs Docker Engine & Docker Compose plugin if missing.
+- Configures OS firewall (`iptables` on Ubuntu / `firewalld` on Oracle Linux) to allow Port 80 & 443.
+- Builds the optimized Next.js standalone container natively on your instance architecture (AMD64 or ARM64 Ampere A1).
+- Starts the container on port 80 with health checks and auto-restart policy.
+- Prints your public IP address.
+
+---
+
+### Step 3: Automated CI/CD via GitHub Actions (Optional)
+To automatically deploy whenever you push to GitHub:
+1. In your GitHub repository, go to **Settings** → **Secrets and variables** → **Actions**.
+2. Add the following repository secrets:
+   - `OCI_HOST`: Your OCI instance's public IP address.
+   - `OCI_USERNAME`: `ubuntu` (or `opc`).
+   - `OCI_SSH_KEY`: The entire text of your private SSH key (`id_rsa` or `.pem`).
+3. Every push to the `main` branch will trigger [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) to automatically update and restart the container!
 
 ---
 
