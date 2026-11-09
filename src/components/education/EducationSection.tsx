@@ -10,7 +10,7 @@ export function EducationSection() {
   const { education, certifications } = portfolioData;
 
   return (
-    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="education" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <SectionHeading
         eyebrow="Academic & Professional Foundation"
         title="Education & Certifications"

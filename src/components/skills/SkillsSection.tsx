@@ -23,7 +23,7 @@ export function SkillsSection() {
       : skills.filter((cat) => cat.title === activeCategory);
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="skills" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <SectionHeading
         eyebrow="Technical Stack"
         title="Specialized Capabilities"

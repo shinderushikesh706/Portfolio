@@ -17,7 +17,7 @@ export function AboutSection() {
   const icons = [Workflow, Layers, ShieldCheck, Cpu];
 
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="about" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <SectionHeading
         eyebrow="Engineering Philosophy"
         title="Architecting the Frontier of AI"

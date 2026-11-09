@@ -27,7 +27,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-grid-pattern">
+    <section className="relative flex items-center justify-center pt-28 pb-12 sm:pt-32 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-grid-pattern">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-500/10 dark:bg-brand-500/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-accent-cyan/10 rounded-full blur-[120px] pointer-events-none" />

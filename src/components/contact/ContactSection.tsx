@@ -102,7 +102,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+    <section id="contact" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <SectionHeading
         eyebrow="Initiate Collaboration"
         title="Let's Build Something Intelligent"

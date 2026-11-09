@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/contact/ContactSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-12 sm:space-y-20">
+    <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
       <SkillsSection />
@@ -19,4 +19,3 @@ export default function Home() {
     </div>
   );
 }
-

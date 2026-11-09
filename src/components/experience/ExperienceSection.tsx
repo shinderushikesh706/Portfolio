@@ -10,7 +10,7 @@ export function ExperienceSection() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto relative">
+    <section id="experience" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto relative">
       <SectionHeading
         eyebrow="Career Trajectory"
         title="Professional Experience"
