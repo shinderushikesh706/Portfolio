@@ -53,16 +53,16 @@ export function Navbar() {
         {/* Brand Logo */}
         <Link
           href="/"
-          className="flex items-center gap-3 group focus:outline-none"
+          className="flex items-center gap-3.5 group focus:outline-none"
         >
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-accent-cyan flex items-center justify-center text-white shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300 shrink-0">
-            <Cpu className="w-5 sm:w-6 h-5 sm:h-6 transition-transform duration-300 group-hover:rotate-12" />
+          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-accent-cyan flex items-center justify-center text-white shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300 shrink-0">
+            <Cpu className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 group-hover:rotate-12" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold text-base sm:text-lg lg:text-xl text-slate-900 dark:text-slate-100 font-sans tracking-tight leading-tight group-hover:text-brand-600 dark:group-hover:text-cyan-300 transition-colors">
+          <div className="flex flex-col justify-center">
+            <span className="font-black text-lg sm:text-xl lg:text-2xl text-slate-900 dark:text-slate-100 font-sans tracking-tight leading-none group-hover:text-brand-600 dark:group-hover:text-cyan-300 transition-colors">
               {portfolioData.personal.name}
             </span>
-            <span className="text-[11px] sm:text-xs font-mono font-medium text-brand-600 dark:text-cyan-400 uppercase tracking-wider">
+            <span className="text-xs sm:text-sm font-mono font-bold text-brand-600 dark:text-cyan-400 uppercase tracking-wide mt-1">
               AI Engineer
             </span>
           </div>
