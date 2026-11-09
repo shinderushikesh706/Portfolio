@@ -173,6 +173,51 @@ To send actual emails to your inbox, you can easily plug in **Resend**, **SendGr
 
 ---
 
+## ☁️ Deployment Guide (Vultr VPS with Docker)
+
+This repository includes a multi-stage `Dockerfile`, `docker-compose.yml`, and an automated `deploy.sh` script for deploying to any Vultr Cloud Compute instance:
+
+### Option 1: One-Click Deploy on Vultr VPS
+1. Spin up an Ubuntu 22.04 / 24.04 instance on [Vultr](https://my.vultr.com/).
+2. SSH into your Vultr instance:
+   ```bash
+   ssh root@<YOUR_VULTR_IP>
+   ```
+3. Clone the repo and run the deployment script:
+   ```bash
+   git clone https://github.com/shinderushikesh706/portfolio_new.git /var/www/portfolio
+   cd /var/www/portfolio
+   chmod +x deploy.sh
+   ./deploy.sh
+   ```
+   The script automatically installs Docker & Docker Compose (if not present), builds the lightweight standalone container, and starts your site on port 80!
+
+### Option 2: Automated Deployment via GitHub Actions
+Add your Vultr SSH credentials as GitHub Secrets:
+- `VULTR_HOST`: Your Vultr Server IP
+- `VULTR_SSH_KEY`: Your private SSH key
+- `VULTR_USERNAME`: `root` (or your sudo user)
+
+Whenever you push to the `main` branch, [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) will automatically build and deploy the latest changes to your Vultr instance.
+
+---
+
+## 🔌 Vultr MCP Configuration
+
+The project includes an MCP configuration file in [`.agents/mcp_config.json`](.agents/mcp_config.json):
+```json
+{
+  "mcpServers": {
+    "vultr": {
+      "url": "https://mcp.vultr.com/mcp"
+    }
+  }
+}
+```
+*Note: The official Vultr MCP Server connects over Streamable HTTP and provides read-only inspection of your instances, IP addresses, firewall rules, and VPC networks via browser OAuth.*
+
+---
+
 ## 🚢 Deployment Guide (Vercel)
 
 Deploying to [Vercel](https://vercel.com) takes less than 2 minutes:

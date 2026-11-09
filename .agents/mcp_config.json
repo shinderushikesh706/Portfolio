@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "vultr": {
+      "url": "https://mcp.vultr.com/mcp"
+    }
+  }
+}
