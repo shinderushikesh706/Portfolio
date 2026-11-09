@@ -73,7 +73,6 @@ export const portfolioData = {
     subheadline:
       "Senior Software Engineer with 7.5+ years of experience engineering secure, high-scale backend architectures, autonomous AI-driven SOC systems, and production LLM integrations. Proven track record of boosting system reliability by 40% and slashing manual investigation time by ~90%.",
     email: "rshinde.careers@gmail.com",
-    phone: "+91 9503022866",
     location: "Pune, India",
     resumePath: "/resume.pdf",
     socialLinks: {
