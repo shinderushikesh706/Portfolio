@@ -74,7 +74,7 @@ export const portfolioData = {
       "Senior Software Engineer with 7.5+ years of experience engineering secure, high-scale backend architectures, autonomous AI-driven SOC systems, and production LLM integrations. Proven track record of boosting system reliability by 40% and slashing manual investigation time by ~90%.",
     email: "rshinde.careers@gmail.com",
     location: "Pune, India",
-    resumePath: "/resume.pdf",
+    resumePath: "/static/resume.pdf",
     socialLinks: {
       github: "https://github.com/shinderushikesh706",
       linkedin: "https://www.linkedin.com/in/shinderushikesh706/",
@@ -239,17 +239,17 @@ export const portfolioData = {
     },
   ] as ExperienceItem[],
 
-  // Featured Projects from Rushikesh's actual engineering accomplishments
+  // Featured Projects: Exactly the 2 major enterprise projects from Rushikesh's resume
   projects: [
     {
       id: "proj-1",
-      title: "AI-Powered Security Operations Center (SOC) Platform",
-      category: "Multi-Agent Systems & AI",
-      badge: "LangChain • Temporal • FastAPI",
+      title: "AI-Powered Security Operations Center (SOC)",
+      category: "AI & Security Operations",
+      badge: "LangChain • Temporal • FastAPI • React",
       shortDescription:
-        "An AI-driven SOC investigation platform that automates security alert correlation, executes long-running workflows, and uses LLM-based reasoning to analyze events.",
+        "An AI-driven SOC platform that automates and accelerates security alert investigation by correlating alerts from multiple security data sources, executing investigation workflows, and leveraging LLM-based reasoning to analyze security events and generate actionable insights.",
       fullDescription:
-        "Engineered a production-grade AI SOC system that correlates heterogeneous alerts across multiple security data sources. Combines LangChain and LLM reasoning for automated alert analysis with Temporal workflow orchestration for fault-tolerant, long-running investigations.",
+        "Developed an AI-driven SOC platform to investigate and correlate multiple security alerts across heterogeneous security tools and data sources. Implemented AI-driven alert investigation and reasoning using LLMs and LangChain to analyze security events, correlate relevant evidence, and assist analysts in identifying potential threats. Built a workflow orchestration framework using Temporal to execute long-running, fault-tolerant investigation workflows and coordinate multiple activities involved in alert analysis.",
       technologies: [
         "Python",
         "FastAPI",
@@ -257,14 +257,16 @@ export const portfolioData = {
         "LangChain",
         "LLMs",
         "React",
-        "Docker",
         "REST APIs",
+        "Docker",
       ],
       highlights: [
-        "Reduced manual alert investigation effort by ~90% via automated LLM reasoning",
-        "Built fault-tolerant workflow orchestration with Temporal for parallel activity execution and retries",
-        "Engineered multi-source data ingestion pipelines for heterogeneous security products",
-        "Designed interactive React-based investigation dashboard for SOC analysts",
+        "Automated security alert investigation and evidence correlation using LLM reasoning and LangChain",
+        "Built fault-tolerant workflow orchestration with Temporal for long-running, parallel investigation activities with retries & timeouts",
+        "Designed multi-source data ingestion and investigation pipelines across heterogeneous security products",
+        "Developed RESTful backend services using Python and FastAPI for alert management and workflow execution",
+        "Built an interactive React-based SOC investigation dashboard for analysts to view alerts, evidence, and AI findings",
+        "Implemented asynchronous processing and service-to-service integrations to support scalable, resilient investigations",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
@@ -272,43 +274,47 @@ export const portfolioData = {
         overview:
           "Multi-source alert ingestion engine integrated with a Temporal stateful workflow orchestrator, LangChain LLM reasoning node, and FastAPI backend services.",
         components: [
-          "Temporal Workflow Orchestrator (Long-running, retries, timeouts)",
-          "LangChain LLM Reasoning Engine (Evidence correlation & triage)",
-          "Multi-Source Security Alert Ingestion Pipeline",
-          "FastAPI Asynchronous REST Gateway",
-          "React SOC Analyst Investigation Interface",
+          "Temporal Workflow Orchestrator (Long-running, retries, timeouts, reliable state)",
+          "LangChain LLM Reasoning Engine (Evidence correlation, threat analysis, actionable insights)",
+          "Multi-Source Security Alert Ingestion Pipeline (Heterogeneous security tools)",
+          "FastAPI Asynchronous REST Gateway (Alert management & workflow APIs)",
+          "React SOC Analyst Investigation Dashboard (Real-time progress & findings)",
         ],
         metrics: [
           "~90% Reduction in Manual Analyst Effort",
-          "Zero Lost Ingested Alerts (Fault-tolerant Temporal)",
+          "Zero Lost Ingested Alerts (Fault-tolerant Temporal state)",
           "Sub-second API Dispatch for Real-time Feeds",
         ],
       },
     },
     {
       id: "proj-2",
-      title: "DeepTrust Zero-Trust Integration Framework",
+      title: "Deeptrust Security Integrations",
       category: "Zero Trust Architecture",
-      badge: "Python • Architecture • Security",
+      badge: "Python • OOP Design Patterns • Zero Trust",
       shortDescription:
-        "A reusable Python-based integration framework standardizing connectivity across SIEM, IAM, Okta, Duo, Rapid7, Datadog, and Netskope.",
+        "A reusable Python-based integration framework for a Zero Trust security platform to streamline integration with multiple security and identity products (SIEM, IAM, Okta, Duo, Rapid7).",
       fullDescription:
-        "Architected a standardized, extensible integration framework for a Zero Trust security platform. Designed common abstraction layers, interfaces, and reusable components to eliminate boilerplate and accelerate third-party vendor onboarding.",
+        "Designed and developed a reusable integration framework in Python for a Zero Trust security platform, standardizing integration development across multiple security and identity products. Designed a common abstraction layer and integration contract to provide a consistent interface for authentication, API communication, data retrieval, and security operations across different vendors.",
       technologies: [
         "Python",
         "OOP Design Patterns",
         "OAuth 2.0",
         "JWT",
         "REST APIs",
+        "SIEM",
+        "IAM",
         "Okta",
-        "Datadog",
-        "Netskope",
+        "Duo",
+        "Rapid7",
       ],
       highlights: [
-        "Reduced integration onboarding time by 30% through modular contracts and shared components",
-        "Decoupled vendor-specific implementation details from core platform via well-defined interfaces",
-        "Built standardized auth, API clients, rate limiters, retries, and normalized response parsing",
-        "Standardized integrations with Datadog, Netskope, Okta, Rapid7, and Tenable",
+        "Designed and developed reusable Python integration framework for Zero Trust security platform",
+        "Implemented integrations with security tools and platforms including SIEM, IAM, Okta, Duo, and Rapid7",
+        "Applied core Python concepts: OOP, abstraction, inheritance, polymorphism, interfaces, composition, and design patterns",
+        "Built reusable components for authentication, API clients, request/error handling, retries, and response normalization",
+        "Decoupled vendor-specific implementation details from core platform through well-defined interfaces and modular architecture",
+        "Established standardized implementation workflows so developers onboard new integrations with minimal boilerplate",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
@@ -318,136 +324,14 @@ export const portfolioData = {
         components: [
           "Unified Integration Contract & Abstract Base Classes",
           "Authentication & Token Refresh Manager (OAuth 2.0 / JWT)",
-          "Resilient HTTP Client (Exponential backoff, jitter, rate limits)",
+          "Resilient HTTP Client (Exponential backoff, jitter, rate limits, retries)",
           "Normalized Data Serialization & Schema Validation Layer",
+          "Configuration Management & Exception Handling Lifecycle",
         ],
         metrics: [
           "30% Faster Third-Party Vendor Onboarding",
           "100% Normalized Data Format across SIEM/IAM",
           "Zero Platform Rework for New Security Tools",
-        ],
-      },
-    },
-    {
-      id: "proj-3",
-      title: "Enterprise Hybrid RAG & Vector Search System",
-      category: "Retrieval-Augmented Generation",
-      badge: "Vector DB • Oracle AI • LangChain",
-      shortDescription:
-        "High-precision semantic search and RAG engine leveraging vector databases, semantic embeddings, and LLM synthesis with source verification.",
-      fullDescription:
-        "Built on certified Oracle AI Vector Search and Generative AI principles, this system ingests unstructured enterprise documents, generates dense embeddings, and performs similarity search with context-grounded LLM synthesis.",
-      technologies: [
-        "Python",
-        "LangChain",
-        "Vector Databases",
-        "FastAPI",
-        "OpenAI / LLMs",
-        "Redis",
-        "Docker",
-      ],
-      highlights: [
-        "High-recall vector search with reciprocal rank fusion and semantic chunking",
-        "Contextual reranking to minimize hallucinations and enforce citation accuracy",
-        "Low-latency streaming endpoints built with FastAPI and Redis caching",
-      ],
-      githubUrl: "https://github.com/shinderushikesh706",
-      isPlaceholder: false,
-      architectureDetails: {
-        overview:
-          "Two-tier retrieval pipeline combining document chunking, dense vector indexing, semantic search, and prompt-grounded LLM synthesis.",
-        components: [
-          "Vector Database & Embeddings Index",
-          "Semantic Chunking & Metadata Ingestion Worker",
-          "Contextual Reranking Pipeline",
-          "FastAPI Streaming Synthesis Service",
-        ],
-        metrics: [
-          "< 350ms P95 Search Latency",
-          "High Context Relevance & Precision",
-          "Strict Groundedness Guardrails",
-        ],
-      },
-    },
-    {
-      id: "proj-4",
-      title: "Zero-Trust API Security & Rate-Limiting Gateway",
-      category: "API Security",
-      badge: "OAuth 2.0 • JWT • FastAPI",
-      shortDescription:
-        "Hardened API gateway enforcing OAuth 2.0, JWT validation, token introspection, and Redis-backed sliding-window rate limiting.",
-      fullDescription:
-        "Designed to secure microservices across enterprise clients, this gateway implements defense-in-depth API security standards, fine-grained RBAC, and automated token revocation.",
-      technologies: [
-        "Python",
-        "FastAPI",
-        "OAuth 2.0",
-        "JWT",
-        "Redis",
-        "Docker",
-        "AWS",
-      ],
-      highlights: [
-        "Sliding-window distributed rate limiting powered by Redis",
-        "Granular Role-Based Access Control (RBAC) and scopes verification",
-        "Integrated security telemetry and real-time anomaly detection",
-      ],
-      githubUrl: "https://github.com/shinderushikesh706",
-      isPlaceholder: false,
-      architectureDetails: {
-        overview:
-          "High-throughput middleware inspecting incoming requests, validating cryptographic signatures, enforcing rate quotas, and forwarding authenticated payloads.",
-        components: [
-          "JWT Introspection & Signature Verifier",
-          "Redis Distributed Rate Limiter",
-          "Audit Logging & Telemetry Dispatcher",
-          "Reverse Proxy & Routing Core",
-        ],
-        metrics: [
-          "Sub-5ms Middleware Overhead",
-          "100% Unauthorized Request Interception",
-          "Zero-Downtime Key Rotation",
-        ],
-      },
-    },
-    {
-      id: "proj-5",
-      title: "Distributed Microservices Task Execution Engine",
-      category: "Distributed Systems",
-      badge: "Temporal • Microservices • AWS",
-      shortDescription:
-        "Fault-tolerant distributed workflow engine coordinating multi-step asynchronous tasks across microservices with automatic retries and state recovery.",
-      fullDescription:
-        "Engineered for mission-critical enterprise workflows that require guaranteed completion. Uses Temporal to manage complex state transitions, service-to-service communication, and disaster recovery.",
-      technologies: [
-        "Python",
-        "FastAPI",
-        "Temporal",
-        "Docker",
-        "AWS",
-        "CI/CD",
-        "PostgreSQL",
-      ],
-      highlights: [
-        "Guaranteed eventual execution with deterministic state history replay",
-        "Modular activity workers with automatic exponential backoff retries",
-        "Zero data loss during unexpected service restarts or network partitions",
-      ],
-      githubUrl: "https://github.com/shinderushikesh706",
-      isPlaceholder: false,
-      architectureDetails: {
-        overview:
-          "Event-driven workflow engine decoupling long-running business logic into deterministic orchestration workflows and scalable activity workers.",
-        components: [
-          "Temporal State Coordinator",
-          "Asynchronous Python Activity Workers",
-          "FastAPI Management & Telemetry API",
-          "PostgreSQL State Persistence Store",
-        ],
-        metrics: [
-          "99.99% Execution Reliability",
-          "Automated Failure Recovery",
-          "Scalable Concurrent Workflow Execution",
         ],
       },
     },
@@ -460,7 +344,7 @@ export const portfolioData = {
       degree: "Bachelor of Technology (B.Tech)",
       field: "Computer Engineering",
       institution: "Government College of Engineering, Jalgaon",
-      year: "2014 — 2018",
+      year: "2014 — 06/2018",
       details:
         "Graduated with GPA 7.11/10. Comprehensive coursework in Computer Science, Distributed Systems, Algorithms, Database Management Systems, and Object-Oriented Software Design.",
       isPlaceholder: false,

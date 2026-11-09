@@ -14,11 +14,8 @@ export function ProjectsSection() {
 
   const categories = [
     "All",
-    "Multi-Agent Systems & AI",
+    "AI & Security Operations",
     "Zero Trust Architecture",
-    "Retrieval-Augmented Generation",
-    "API Security",
-    "Distributed Systems",
   ];
 
   const filteredProjects =
@@ -38,7 +35,7 @@ export function ProjectsSection() {
       <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center gap-2.5 text-brand-300 text-xs sm:text-sm text-center">
         <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
         <span>
-          Proven production systems delivering up to <strong>90% manual effort reduction</strong> in AI SOC operations and <strong>40% improvement</strong> in backend system reliability.
+          Production systems delivering up to <strong>90% manual effort reduction</strong> in AI SOC investigations and standardized <strong>Zero Trust multi-vendor integrations</strong>.
         </span>
       </div>
 
@@ -59,8 +56,8 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      {/* Project Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Project Cards Grid (2-column balanced layout) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
