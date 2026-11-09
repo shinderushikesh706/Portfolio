@@ -112,3 +112,4 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
     </div>
   );
 }
+

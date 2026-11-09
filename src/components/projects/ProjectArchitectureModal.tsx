@@ -135,9 +135,9 @@ export function ProjectArchitectureModal({
 
           {/* Footer Actions */}
           <div className="p-4 sm:p-6 border-t border-slate-800 bg-slate-950/50 flex flex-wrap items-center justify-between gap-3">
-            <div className="text-xs text-slate-400 font-mono">
-              Replace with your actual project data in{" "}
-              <code className="text-cyan-400">src/data/portfolioData.ts</code>
+            <div className="text-xs text-slate-400 font-mono flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              <span>Production Tested Architecture</span>
             </div>
             <div className="flex items-center gap-3">
               <a
@@ -165,3 +165,4 @@ export function ProjectArchitectureModal({
     </AnimatePresence>
   );
 }
+

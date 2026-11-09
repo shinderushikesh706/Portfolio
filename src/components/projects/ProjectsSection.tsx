@@ -5,7 +5,7 @@ import { portfolioData, Project } from "@/data/portfolioData";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectArchitectureModal } from "./ProjectArchitectureModal";
-import { AlertCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export function ProjectsSection() {
   const { projects } = portfolioData;
@@ -14,11 +14,11 @@ export function ProjectsSection() {
 
   const categories = [
     "All",
-    "Multi-Agent Systems",
+    "Multi-Agent Systems & AI",
+    "Zero Trust Architecture",
     "Retrieval-Augmented Generation",
-    "Intelligent Assistant",
-    "Enterprise AI",
-    "Document Intelligence",
+    "API Security",
+    "Distributed Systems",
   ];
 
   const filteredProjects =
@@ -29,24 +29,17 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <SectionHeading
-        eyebrow="Case Studies & Prototypes"
-        title="Featured AI Engineering Projects"
-        subtitle="Architecting agentic loops, high-recall vector search, and resilient LLM enterprise solutions."
+        eyebrow="Key Systems & Architectures"
+        title="Featured Engineering Projects"
+        subtitle="Production-grade AI systems, Zero Trust integration frameworks, and distributed workflow orchestration."
       />
 
-      {/* Placeholder Notice Banner */}
-      <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-start gap-3 text-amber-300 text-xs sm:text-sm">
-        <AlertCircle className="w-5 h-5 shrink-0 mt-0.5 text-amber-400" />
-        <div>
-          <span className="font-semibold text-amber-200">
-            Note on Showcase Projects:
-          </span>{" "}
-          These featured projects represent realistic architectural templates covering the 5 core AI engineering domains (Agentic, RAG, Assistants, Enterprise Security, Document Processing). They are ready for you to replace with your exact repos and live URLs in{" "}
-          <code className="text-amber-100 font-mono bg-amber-950/60 px-1 py-0.5 rounded">
-            src/data/portfolioData.ts
-          </code>
-          .
-        </div>
+      {/* Engineering Highlights Banner */}
+      <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center gap-2.5 text-brand-300 text-xs sm:text-sm text-center">
+        <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+        <span>
+          Proven production systems delivering up to <strong>90% manual effort reduction</strong> in AI SOC operations and <strong>40% improvement</strong> in backend system reliability.
+        </span>
       </div>
 
       {/* Category Filters */}

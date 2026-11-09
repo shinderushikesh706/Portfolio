@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import {
   Mail,
+  Phone,
   Copy,
   Check,
   Send,
@@ -164,6 +165,29 @@ export function ContactSection() {
                   <Copy className="w-4 h-4" />
                 )}
               </button>
+            </div>
+
+            {/* Direct Phone / WhatsApp */}
+            <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 overflow-hidden">
+                <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div className="truncate">
+                  <span className="text-[10px] font-mono uppercase text-slate-500 block">
+                    Phone / WhatsApp
+                  </span>
+                  <a
+                    href="tel:+919503022866"
+                    className="text-xs sm:text-sm font-mono text-slate-200 hover:text-cyan-400 transition-colors truncate block"
+                  >
+                    {personal.phone}
+                  </a>
+                </div>
+              </div>
+              <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
+                Direct
+              </span>
             </div>
 
             {/* Social Links Cards */}
@@ -379,3 +403,4 @@ export function ContactSection() {
     </section>
   );
 }
+

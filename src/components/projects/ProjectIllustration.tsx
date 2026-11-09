@@ -145,3 +145,4 @@ export function ProjectIllustration({ id, category }: ProjectIllustrationProps) 
       );
   }
 }
+

@@ -131,3 +131,4 @@ export function EducationSection() {
     </section>
   );
 }
+

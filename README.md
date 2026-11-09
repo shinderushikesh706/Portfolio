@@ -207,3 +207,4 @@ Deploying to [Vercel](https://vercel.com) takes less than 2 minutes:
 ## 📄 License
 
 MIT License — Feel free to use and adapt this portfolio for your personal brand!
+
