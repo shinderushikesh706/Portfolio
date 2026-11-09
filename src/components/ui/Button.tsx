@@ -38,11 +38,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       glow:
         "bg-gradient-to-r from-brand-600 via-indigo-600 to-accent-cyan hover:from-brand-500 hover:to-cyan-400 text-white shadow-glow-sm hover:shadow-glow-md border border-white/20",
       secondary:
-        "bg-slate-900/80 hover:bg-slate-800 text-slate-100 dark:bg-slate-800/80 dark:hover:bg-slate-700/80 border border-slate-700/60 shadow-sm",
+        "bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 shadow-sm dark:bg-slate-800/80 dark:hover:bg-slate-700/80 dark:text-slate-100 dark:border-slate-700/60",
       outline:
-        "bg-transparent hover:bg-slate-800/40 text-slate-200 border border-slate-700/70 hover:border-slate-500",
+        "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800/40 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700/70 hover:border-slate-400 dark:hover:border-slate-500",
       ghost:
-        "bg-transparent hover:bg-slate-800/50 text-slate-300 hover:text-white",
+        "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800/50 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white",
     };
 
     return (
@@ -64,4 +64,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-

@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
   return (
-    <div className="rounded-2xl glass-panel border border-slate-800/80 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-brand-500/50 hover:shadow-glow-sm">
+    <div className="rounded-2xl glass-panel border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-brand-500/50 hover:shadow-lg dark:hover:shadow-glow-sm">
       {/* Top Graphic */}
       <div className="relative">
         <ProjectIllustration id={project.id} category={project.category} />
@@ -34,13 +34,13 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
       {/* Card Body */}
       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <div className="text-xs font-mono text-cyan-400 mb-1">
+          <div className="text-xs font-mono text-brand-600 dark:text-cyan-400 mb-1 font-semibold">
             {project.category}
           </div>
-          <h3 className="text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-brand-600 dark:group-hover:text-cyan-300 transition-colors">
             {project.title}
           </h3>
-          <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
             {project.shortDescription}
           </p>
 
@@ -52,9 +52,9 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
             {project.highlights.map((highlight, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-2 text-xs text-slate-300"
+                className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"
               >
-                <span className="text-brand-400 mt-0.5">•</span>
+                <span className="text-brand-500 mt-0.5 font-bold">•</span>
                 <span>{highlight}</span>
               </div>
             ))}
@@ -67,7 +67,7 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-900/90 border border-slate-800 text-slate-300"
+                className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 shadow-2xs"
               >
                 {tech}
               </span>
@@ -75,10 +75,10 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
           </div>
 
           {/* Action Links */}
-          <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-2">
+          <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between gap-2">
             <button
               onClick={() => onOpenArchitecture(project)}
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 hover:underline transition-colors py-1"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-600 dark:text-cyan-400 hover:text-brand-700 dark:hover:text-cyan-300 hover:underline transition-colors py-1 font-semibold"
             >
               <Layers className="w-3.5 h-3.5" />
               <span>System Deep Dive</span>
@@ -88,7 +88,7 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white text-xs font-medium transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white text-xs font-medium shadow-xs transition-colors"
               aria-label="GitHub Repository"
               title="View on GitHub"
             >

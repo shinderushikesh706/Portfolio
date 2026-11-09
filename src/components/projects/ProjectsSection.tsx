@@ -32,8 +32,8 @@ export function ProjectsSection() {
       />
 
       {/* Engineering Highlights Banner */}
-      <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center gap-2.5 text-brand-300 text-xs sm:text-sm text-center">
-        <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+      <div className="max-w-3xl mx-auto mb-10 p-4 rounded-xl bg-brand-50/90 dark:bg-brand-500/10 border border-brand-200 dark:border-brand-500/20 flex items-center justify-center gap-2.5 text-brand-900 dark:text-brand-300 text-xs sm:text-sm text-center shadow-xs">
+        <Sparkles className="w-4 h-4 text-brand-600 dark:text-cyan-400 shrink-0" />
         <span>
           Production systems delivering up to <strong>90% manual effort reduction</strong> in AI SOC investigations and standardized <strong>Zero Trust multi-vendor integrations</strong>.
         </span>
@@ -48,7 +48,7 @@ export function ProjectsSection() {
             className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 border ${
               filter === cat
                 ? "bg-brand-600 text-white border-brand-400/40 shadow-glow-sm"
-                : "bg-slate-900/60 text-slate-400 hover:text-slate-200 border-slate-800"
+                : "bg-white dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border-slate-200 dark:border-slate-800 shadow-xs"
             }`}
           >
             {cat}

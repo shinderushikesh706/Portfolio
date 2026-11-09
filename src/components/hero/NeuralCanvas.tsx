@@ -185,7 +185,8 @@ export function NeuralCanvas() {
         // Render labels for key architectural nodes
         if (node.label) {
           ctx.font = "10px JetBrains Mono, monospace";
-          ctx.fillStyle = "rgba(226, 232, 240, 0.75)";
+          const isDark = typeof document !== "undefined" && document.documentElement.classList.contains("dark");
+          ctx.fillStyle = isDark ? "rgba(226, 232, 240, 0.75)" : "rgba(30, 41, 59, 0.85)";
           ctx.fillText(node.label, node.x + 10, node.y + 3);
         }
       }
@@ -206,18 +207,18 @@ export function NeuralCanvas() {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden glass-panel border border-slate-800/80 shadow-2xl flex items-center justify-center group">
+    <div className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden glass-panel border border-slate-200 dark:border-slate-800/80 shadow-lg dark:shadow-2xl flex items-center justify-center group">
       <div className="absolute inset-0 bg-radial-gradient from-brand-500/10 via-transparent to-transparent pointer-events-none" />
       <canvas
         ref={canvasRef}
         className="w-full h-full cursor-crosshair relative z-10"
       />
       {/* Decorative badge overlay */}
-      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-800 text-[11px] font-mono text-slate-300">
-        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 text-[11px] font-mono text-slate-700 dark:text-slate-300 shadow-xs">
+        <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
         <span>Live Autonomous Agent Simulation</span>
       </div>
-      <div className="absolute top-4 right-4 z-20 px-2.5 py-1 rounded-lg bg-slate-900/70 border border-slate-800 text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+      <div className="absolute top-4 right-4 z-20 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-[10px] font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest shadow-xs">
         Graph • RAG • Tools
       </div>
     </div>

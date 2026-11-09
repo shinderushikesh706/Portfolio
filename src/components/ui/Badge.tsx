@@ -25,23 +25,23 @@ export function Badge({
 
   const variantStyles = {
     brand:
-      "bg-brand-500/10 text-brand-400 border border-brand-500/25 hover:border-brand-500/40",
-    cyan: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/25 hover:border-cyan-500/40",
+      "bg-brand-50 text-brand-700 border-brand-200 dark:bg-brand-500/10 dark:text-brand-400 dark:border-brand-500/25 hover:border-brand-400",
+    cyan: "bg-cyan-50 text-cyan-800 border-cyan-200 dark:bg-cyan-500/10 dark:text-cyan-400 dark:border-cyan-500/25 hover:border-cyan-400",
     emerald:
-      "bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 hover:border-emerald-500/40",
+      "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/25 hover:border-emerald-400",
     amber:
-      "bg-amber-500/10 text-amber-400 border border-amber-500/25 hover:border-amber-500/40",
+      "bg-amber-50 text-amber-800 border-amber-200 dark:bg-amber-500/10 dark:text-amber-400 dark:border-amber-500/25 hover:border-amber-400",
     neutral:
-      "bg-slate-800/60 text-slate-300 border border-slate-700/60 hover:border-slate-600",
+      "bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800/60 dark:text-slate-300 dark:border-slate-700/60",
     outline:
-      "bg-transparent text-slate-400 border border-slate-800 hover:border-slate-700",
+      "bg-transparent text-slate-600 border-slate-200 dark:text-slate-400 dark:border-slate-800",
   };
 
   const dotColors = {
-    brand: "bg-brand-400",
-    cyan: "bg-cyan-400",
-    emerald: "bg-emerald-400 animate-pulse",
-    amber: "bg-amber-400",
+    brand: "bg-brand-500 dark:bg-brand-400",
+    cyan: "bg-cyan-500 dark:bg-cyan-400",
+    emerald: "bg-emerald-500 dark:bg-emerald-400 animate-pulse",
+    amber: "bg-amber-500 dark:bg-amber-400",
     neutral: "bg-slate-400",
     outline: "bg-slate-400",
   };
@@ -60,4 +60,3 @@ export function Badge({
     </span>
   );
 }
-

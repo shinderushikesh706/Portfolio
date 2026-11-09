@@ -12,7 +12,6 @@ import {
   Send,
   Github,
   Linkedin,
-  MessageSquare,
   AlertCircle,
   Sparkles,
 } from "lucide-react";
@@ -119,24 +118,24 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="lg:col-span-5 space-y-6"
         >
-          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-800/80 space-y-6">
+          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 dark:border-slate-800/80 space-y-6 shadow-xs">
             <div>
-              <div className="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2">
+              <div className="flex items-center gap-2 text-brand-600 dark:text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2 font-semibold">
                 <Sparkles className="w-4 h-4" />
                 <span>Direct Inquiries</span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-100">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                 Start a Conversation
               </h3>
-              <p className="mt-2 text-sm text-slate-400 leading-relaxed">
-                Whether you are exploring agentic architectures, optimizing RAG pipelines, or seeking engineering leadership for an AI initiative, reach out directly.
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Whether you are exploring AI SOC architectures, optimizing backend services, or looking for senior engineering leadership, reach out directly.
               </p>
             </div>
 
             {/* Email Box with One-Click Copy */}
-            <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-3">
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 shadow-2xs">
               <div className="flex items-center gap-3 overflow-hidden">
-                <div className="p-2.5 rounded-lg bg-brand-500/10 text-brand-400 shrink-0">
+                <div className="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-brand-600 dark:bg-brand-500/10 dark:border-brand-500/20 dark:text-brand-400 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="truncate">
@@ -145,7 +144,7 @@ export function ContactSection() {
                   </span>
                   <a
                     href={`mailto:${personal.email}`}
-                    className="text-xs sm:text-sm font-mono text-slate-200 hover:text-cyan-400 transition-colors truncate block"
+                    className="text-xs sm:text-sm font-mono text-slate-900 dark:text-slate-200 hover:text-brand-600 dark:hover:text-cyan-400 transition-colors truncate block font-medium"
                   >
                     {personal.email}
                   </a>
@@ -154,12 +153,12 @@ export function ContactSection() {
 
               <button
                 onClick={handleCopyEmail}
-                className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors shrink-0"
+                className="p-2 rounded-lg bg-white hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-700 transition-colors shrink-0 shadow-2xs"
                 aria-label="Copy email address"
                 title="Copy to clipboard"
               >
                 {copiedEmail ? (
-                  <Check className="w-4 h-4 text-emerald-400" />
+                  <Check className="w-4 h-4 text-emerald-500" />
                 ) : (
                   <Copy className="w-4 h-4" />
                 )}
@@ -172,13 +171,13 @@ export function ContactSection() {
                 href={personal.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-brand-500/40 flex items-center gap-3 text-slate-300 hover:text-white transition-all group"
+                className="p-4 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-slate-900/60 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-500/40 flex items-center gap-3 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all group shadow-2xs"
               >
-                <div className="p-2 rounded-lg bg-brand-500/10 text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                <div className="p-2 rounded-lg bg-brand-50 border border-brand-200 text-brand-600 group-hover:bg-brand-600 group-hover:text-white dark:bg-brand-500/10 dark:border-brand-500/20 dark:text-brand-400 transition-colors">
                   <Linkedin className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-200">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-slate-200">
                     LinkedIn
                   </div>
                   <div className="text-[10px] font-mono text-slate-500">
@@ -191,13 +190,13 @@ export function ContactSection() {
                 href={personal.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-brand-500/40 flex items-center gap-3 text-slate-300 hover:text-white transition-all group"
+                className="p-4 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-slate-900/60 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-500/40 flex items-center gap-3 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all group shadow-2xs"
               >
-                <div className="p-2 rounded-lg bg-slate-800 text-slate-300 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+                <div className="p-2 rounded-lg bg-slate-100 text-slate-700 group-hover:bg-brand-600 group-hover:text-white dark:bg-slate-800 dark:text-slate-300 transition-colors">
                   <Github className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-slate-200">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-slate-200">
                     GitHub
                   </div>
                   <div className="text-[10px] font-mono text-slate-500">
@@ -208,9 +207,9 @@ export function ContactSection() {
             </div>
 
             {/* Timezone / Availability Note */}
-            <div className="pt-4 border-t border-slate-800/80 text-xs font-mono text-slate-400 flex items-center justify-between">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 text-xs font-mono text-slate-600 dark:text-slate-400 flex items-center justify-between">
               <span>Location: {personal.location}</span>
-              <span className="text-emerald-400">Response &lt; 24h</span>
+              <span className="text-emerald-700 dark:text-emerald-400 font-semibold">Response &lt; 24h</span>
             </div>
           </div>
         </motion.div>
@@ -223,16 +222,16 @@ export function ContactSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="lg:col-span-7"
         >
-          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-800/80">
+          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-slate-200 dark:border-slate-800/80 shadow-xs">
             {isSubmitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 mx-auto flex items-center justify-center">
+                <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 dark:bg-emerald-500/10 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
                   <Check className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                   Message Transmitted Successfully!
                 </h3>
-                <p className="text-slate-400 max-w-md mx-auto text-sm leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 max-w-md mx-auto text-sm leading-relaxed">
                   Thank you for reaching out. I have received your message and will review your inquiry promptly.
                 </p>
                 <div className="pt-4">
@@ -248,7 +247,7 @@ export function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 {serverError && (
-                  <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xs flex items-center gap-2">
+                  <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-xs flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 shrink-0" />
                     <span>{serverError}</span>
                   </div>
@@ -257,8 +256,8 @@ export function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name field */}
                   <div>
-                    <label className="block text-xs font-mono text-slate-300 mb-1.5">
-                      Your Name <span className="text-brand-400">*</span>
+                    <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-semibold">
+                      Your Name <span className="text-brand-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -266,13 +265,13 @@ export function ContactSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      placeholder="e.g. Sarah Connor"
-                      className={`w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${
-                        errors.name ? "border-red-500/80" : "border-slate-800"
+                      placeholder="e.g. Alex Rivera"
+                      className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors shadow-2xs ${
+                        errors.name ? "border-red-500/80" : "border-slate-200 dark:border-slate-800"
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1 text-[11px] text-red-400">
+                      <p className="mt-1 text-[11px] text-red-500 dark:text-red-400">
                         {errors.name}
                       </p>
                     )}
@@ -280,8 +279,8 @@ export function ContactSection() {
 
                   {/* Email field */}
                   <div>
-                    <label className="block text-xs font-mono text-slate-300 mb-1.5">
-                      Your Email <span className="text-brand-400">*</span>
+                    <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-semibold">
+                      Your Email <span className="text-brand-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -289,13 +288,13 @@ export function ContactSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      placeholder="e.g. sarah@enterprise.com"
-                      className={`w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${
-                        errors.email ? "border-red-500/80" : "border-slate-800"
+                      placeholder="e.g. alex@enterprise.com"
+                      className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors shadow-2xs ${
+                        errors.email ? "border-red-500/80" : "border-slate-200 dark:border-slate-800"
                       }`}
                     />
                     {errors.email && (
-                      <p className="mt-1 text-[11px] text-red-400">
+                      <p className="mt-1 text-[11px] text-red-500 dark:text-red-400">
                         {errors.email}
                       </p>
                     )}
@@ -304,8 +303,8 @@ export function ContactSection() {
 
                 {/* Subject field */}
                 <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
-                    Subject <span className="text-brand-400">*</span>
+                  <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-semibold">
+                    Subject <span className="text-brand-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -313,13 +312,13 @@ export function ContactSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    placeholder="e.g. Agentic AI Architecture Consultation / Role Inquiry"
-                    className={`w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors ${
-                      errors.subject ? "border-red-500/80" : "border-slate-800"
+                    placeholder="e.g. AI SOC Architecture Consultation / Role Inquiry"
+                    className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors shadow-2xs ${
+                      errors.subject ? "border-red-500/80" : "border-slate-200 dark:border-slate-800"
                     }`}
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-[11px] text-red-400">
+                    <p className="mt-1 text-[11px] text-red-500 dark:text-red-400">
                       {errors.subject}
                     </p>
                   )}
@@ -327,8 +326,8 @@ export function ContactSection() {
 
                 {/* Message field */}
                 <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
-                    Message <span className="text-brand-400">*</span>
+                  <label className="block text-xs font-mono text-slate-700 dark:text-slate-300 mb-1.5 font-semibold">
+                    Message <span className="text-brand-500">*</span>
                   </label>
                   <textarea
                     rows={5}
@@ -337,12 +336,12 @@ export function ContactSection() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     placeholder="Briefly describe your project scope, engineering requirements, or opportunity..."
-                    className={`w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border text-slate-100 placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors resize-none ${
-                      errors.message ? "border-red-500/80" : "border-slate-800"
+                    className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/90 border text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-colors resize-none shadow-2xs ${
+                      errors.message ? "border-red-500/80" : "border-slate-200 dark:border-slate-800"
                     }`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-[11px] text-red-400">
+                    <p className="mt-1 text-[11px] text-red-500 dark:text-red-400">
                       {errors.message}
                     </p>
                   )}
@@ -379,4 +378,3 @@ export function ContactSection() {
     </section>
   );
 }
-
