@@ -52,10 +52,10 @@ export function HeroSection() {
           </div>
 
           {/* Greeting */}
-          <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-base sm:text-lg font-medium mb-3">
-            <Sparkles className="w-4 h-4 text-brand-500" />
+          <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-lg sm:text-xl font-medium mb-3">
+            <Sparkles className="w-5 h-5 text-brand-500" />
             <span>Hi, I&apos;m</span>
-            <span className="text-slate-900 dark:text-slate-100 font-bold underline decoration-brand-500/50 underline-offset-4">
+            <span className="text-slate-900 dark:text-slate-100 font-extrabold text-xl sm:text-2xl underline decoration-brand-500/50 underline-offset-4">
               {personal.name}
             </span>
           </div>
