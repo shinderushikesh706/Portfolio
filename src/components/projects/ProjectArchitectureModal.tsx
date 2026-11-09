@@ -1,10 +1,9 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Cpu, CheckCircle2, Gauge, ExternalLink, Github, Sparkles } from "lucide-react";
+import { X, Cpu, CheckCircle2, Gauge, Github, Sparkles } from "lucide-react";
 import { Project } from "@/data/portfolioData";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 
 interface ProjectArchitectureModalProps {
   project: Project | null;
@@ -139,30 +138,18 @@ export function ProjectArchitectureModal({
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
               <span>Production Tested Architecture</span>
             </div>
-            <div className="flex items-center gap-3">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors"
-              >
-                <Github className="w-3.5 h-3.5" />
-                <span>GitHub</span>
-              </a>
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                <span>Live Demo</span>
-              </a>
-            </div>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-medium bg-brand-600 hover:bg-brand-500 text-white transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>View GitHub Repository</span>
+            </a>
           </div>
         </motion.div>
       </div>
     </AnimatePresence>
   );
 }
-

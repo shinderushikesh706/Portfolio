@@ -7,7 +7,7 @@ export interface Project {
   technologies: string[];
   highlights: string[];
   githubUrl: string;
-  demoUrl: string;
+  demoUrl?: string;
   badge: string;
   isPlaceholder: boolean;
   architectureDetails: {
@@ -267,7 +267,6 @@ export const portfolioData = {
         "Designed interactive React-based investigation dashboard for SOC analysts",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
-      demoUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
       architectureDetails: {
         overview:
@@ -312,7 +311,6 @@ export const portfolioData = {
         "Standardized integrations with Datadog, Netskope, Okta, Rapid7, and Tenable",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
-      demoUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
       architectureDetails: {
         overview:
@@ -354,7 +352,6 @@ export const portfolioData = {
         "Low-latency streaming endpoints built with FastAPI and Redis caching",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
-      demoUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
       architectureDetails: {
         overview:
@@ -396,7 +393,6 @@ export const portfolioData = {
         "Integrated security telemetry and real-time anomaly detection",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
-      demoUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
       architectureDetails: {
         overview:
@@ -438,7 +434,6 @@ export const portfolioData = {
         "Zero data loss during unexpected service restarts or network partitions",
       ],
       githubUrl: "https://github.com/shinderushikesh706",
-      demoUrl: "https://github.com/shinderushikesh706",
       isPlaceholder: false,
       architectureDetails: {
         overview:

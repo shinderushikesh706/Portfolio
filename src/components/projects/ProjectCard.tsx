@@ -4,7 +4,7 @@ import React from "react";
 import { Project } from "@/data/portfolioData";
 import { ProjectIllustration } from "./ProjectIllustration";
 import { Badge } from "@/components/ui/Badge";
-import { ExternalLink, Github, Layers, ArrowUpRight } from "lucide-react";
+import { Github, Layers } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -84,32 +84,20 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
               <span>System Deep Dive</span>
             </button>
 
-            <div className="flex items-center gap-2">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors"
-                aria-label="GitHub Repository"
-                title="View Code on GitHub"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-brand-600/90 hover:bg-brand-500 text-white text-xs font-medium shadow-sm transition-colors"
-                title="View Live Demo"
-              >
-                <span>Demo</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white text-xs font-medium transition-colors"
+              aria-label="GitHub Repository"
+              title="View on GitHub"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
