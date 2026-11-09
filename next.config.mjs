@@ -5,6 +5,28 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async headers() {
+    return [
+      {
+        source: "/static/:path*",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: 'inline; filename="Rushikesh Shinde AI Engineer.pdf"',
+          },
+        ],
+      },
+      {
+        source: "/resume.pdf",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: 'inline; filename="Rushikesh Shinde AI Engineer.pdf"',
+          },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

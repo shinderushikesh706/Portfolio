@@ -93,7 +93,7 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href={portfolioData.personal.resumePath}
-            download="Rushikesh_Shinde_Resume.pdf"
+            download="Rushikesh Shinde AI Engineer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -140,7 +140,7 @@ export function Navbar() {
           <div className="pt-3 border-t border-slate-200 dark:border-slate-800">
             <a
               href={portfolioData.personal.resumePath}
-              download="Rushikesh_Shinde_Resume.pdf"
+              download="Rushikesh Shinde AI Engineer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

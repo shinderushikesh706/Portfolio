@@ -98,7 +98,7 @@ export function HeroSection() {
 
             <a
               href={personal.resumePath}
-              download="Rushikesh_Shinde_Resume.pdf"
+              download="Rushikesh Shinde AI Engineer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
