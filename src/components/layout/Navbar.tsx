@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Button } from "@/components/ui/Button";
-import { Menu, X, Download, Cpu } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -55,8 +56,15 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-3.5 group focus:outline-none"
         >
-          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-accent-cyan flex items-center justify-center text-white shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300 shrink-0">
-            <Cpu className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 group-hover:rotate-12" />
+          <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-black border border-slate-800 shadow-md flex items-center justify-center overflow-hidden shrink-0 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-all duration-300">
+            <Image
+              src="/logo.png"
+              alt={`${portfolioData.personal.name} Logo`}
+              width={48}
+              height={48}
+              className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300"
+              priority
+            />
           </div>
           <div className="flex flex-col justify-center">
             <span className="font-black text-lg sm:text-xl lg:text-2xl text-slate-900 dark:text-slate-100 font-sans tracking-tight leading-none group-hover:text-brand-600 dark:group-hover:text-cyan-300 transition-colors">

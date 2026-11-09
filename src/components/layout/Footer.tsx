@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
-import { Cpu, Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 export function Footer() {
   const { personal } = portfolioData;
@@ -14,8 +15,14 @@ export function Footer() {
           {/* Brand Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2.5 mb-2">
-              <div className="w-8 h-8 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-xs">
-                <Cpu className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-xl bg-black border border-slate-800 flex items-center justify-center overflow-hidden shrink-0 shadow-xs">
+                <Image
+                  src="/logo.png"
+                  alt={`${personal.name} Logo`}
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-contain p-0.5"
+                />
               </div>
               <span className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 {personal.name}

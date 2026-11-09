@@ -30,6 +30,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: portfolioData.personal.name }],
   creator: portfolioData.personal.name,
+  icons: {
+    icon: "/logo-square.png",
+    apple: "/logo-square.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
