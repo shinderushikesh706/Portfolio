@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Cpu, CheckCircle2, Gauge, Github, Sparkles } from "lucide-react";
 import { Project } from "@/data/portfolioData";
 import { Badge } from "@/components/ui/Badge";
+import { SocCaseStudyModal } from "./SocCaseStudyModal";
 
 interface ProjectArchitectureModalProps {
   project: Project | null;
@@ -15,6 +16,11 @@ export function ProjectArchitectureModal({
   onClose,
 }: ProjectArchitectureModalProps) {
   if (!project) return null;
+
+  // If this is the AI-Powered SOC platform with comprehensive case study data, render the specialized deep-dive modal
+  if (project.id === "proj-1" && project.caseStudy) {
+    return <SocCaseStudyModal project={project} onClose={onClose} />;
+  }
 
   return (
     <AnimatePresence>

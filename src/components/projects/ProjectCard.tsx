@@ -78,10 +78,14 @@ export function ProjectCard({ project, onOpenArchitecture }: ProjectCardProps) {
           <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between gap-2">
             <button
               onClick={() => onOpenArchitecture(project)}
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-600 dark:text-cyan-400 hover:text-brand-700 dark:hover:text-cyan-300 hover:underline transition-colors py-1 font-semibold"
+              className={
+                project.id === "proj-1"
+                  ? "inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-brand-50 hover:bg-brand-100 dark:bg-brand-500/15 dark:hover:bg-brand-500/25 text-brand-700 dark:text-cyan-300 border border-brand-300/80 dark:border-brand-500/35 transition-all shadow-2xs"
+                  : "inline-flex items-center gap-1.5 text-xs font-mono text-brand-600 dark:text-cyan-400 hover:text-brand-700 dark:hover:text-cyan-300 hover:underline transition-colors py-1 font-semibold"
+              }
             >
               <Layers className="w-3.5 h-3.5" />
-              <span>System Deep Dive</span>
+              <span>{project.id === "proj-1" ? "Explore AI Case Study" : "System Deep Dive"}</span>
             </button>
 
             <a
